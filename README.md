@@ -1,50 +1,81 @@
-# Welcome to your Expo app 👋
+# 🛒 Grocery List App (React Native + Expo)
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+A simple and functional Grocery List app built with **React Native** and **Expo**.  
+Users can:
 
-## Get started
+- 📝 Add, edit, and delete grocery lists
+- 🛍️ Add items to lists with quantities
+- ✅ Mark items as bought
 
-1. Install dependencies
+This app is ideal as a starting point or proof of concept for a larger shopping list application.
 
-   ```bash
-   npm install
-   ```
+---
 
-2. Start the app
+## 📦 Tech Stack
 
-   ```bash
-   npx expo start
-   ```
+- [React Native](https://reactnative.dev/)
+- [Expo](https://expo.dev/)
+- React Query
+- [Gluestack UI](https://gluestack.io/)
+- [json-server](https://github.com/typicode/json-server)
 
-In the output, you'll find options to open the app in a
+---
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+## 🚀 Getting Started
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+### 1. Clone the repository
 
-## Get a fresh project
+bash
 
-When you're ready, run:
+`git clone git@github.com:Boltman92/grocery-list.git`
+`cd grocery-list`
 
-```bash
-npm run reset-project
-```
+### 2. Install dependencies
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+bash
 
-## Learn more
+`npm install`
 
-To learn more about developing your project with Expo, look at the following resources:
+### 3. Set up environment variables
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+Create a `.env` file in the root directory and add:
 
-## Join the community
+    `# For iOS simulator EXPO_PUBLIC_BASE_URL=http://localhost:3000
 
-Join our community of developers creating universal apps.
+     For Android emulator (using Android Studio) EXPO_PUBLIC_BASE_URL=http://10.0.2.2:3000
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+     For real devices (iOS or Android) EXPO_PUBLIC_BASE_URL=http://YOUR_LOCAL_IP:3000
+
+> ⚠️ Make sure `json-server` is running at the specified address.
+
+### 4. Start the app
+
+bash
+
+`npx expo start`
+
+Use the Expo Go app or a simulator to view the app.
+
+---
+
+## 🧪 Features
+
+- 🔘 Tab-based navigation
+- ➕ Create new grocery lists
+- ✏️ Edit lists
+- 🗑️ Delete individual lists or items
+- ✅ Mark items as “bought”
+- ☁️ Data fetched from `json-server`
+
+---
+
+## 🛠 Backend Setup (json-server)
+
+To run a local mock API server:
+
+bash
+
+`npm install -g json-server`
+`json-server --watch db.json --port 3000`
+
+> Use a `db.json` file in the root directory or customize as needed.
